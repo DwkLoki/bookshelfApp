@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: #719ECE;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+main {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* styling for input section */
+.input-section > h3, .bookshelf > h3 {
+    color: #045c84;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-section {
+    width: 30%;
+    border: 3px solid #045c84;
+    border-radius: 20px;
+    padding: 50px;
+    margin: 25px;
+    height: 40%;
+}
+
+.input-section > form > .input {
+    margin: 15px 0px;
+}
+
+.input-section > form > .input > input {
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddfe2;
+    border-radius: 10px;
+}
+
+.input-section > form > .input > input:focus {
+    outline: 1px solid #045c84;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.input-section > form > .input > input:focus::placeholder {
+    color: #dddfe2;
+}
+
+.input-section > form > .input-complete {
+    display: flex;
+    align-items: center;
+    margin: 15px 0px;
+}
+
+.input-section > form > .input-complete > input {
+    height: 15px;
+    width: 15px;
+    margin: 0px 7px;
+    color: #045c84;
+}
+
+.input-section > form > button {
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #719ECE;
+    border: 2px solid #719ECE;
+    color: white;
+    cursor: pointer;
+}
+
+.input-section > form > button:hover {
+    border: 2px solid #719ECE;
+    background-color: white;
+    color: #719ECE;
+    cursor: pointer;
+}
+
+
+/* styling for booklist section */
+.book-list-section {
+    width: 70%;
+    border-radius: 20px;
+    padding: 50px;
+    margin: 25px;
+}
+
+#searchBook {
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+    border-radius: 24px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+#searchBook:hover {
+    outline: 1px solid #045c84;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+#searchBook > input {
+    border: 1px solid transparent;
+    font-size: 16px;
+    width: 90%;
+}
+
+#searchBook > input:focus {
+    outline: 1px solid transparent;
+}
+
+#searchBook > input:focus::placeholder {
+    color: #dddfe2;
+}
+
+/* Removing input background colour for Chrome autocomplete */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+#searchBook > button {
+    border: 1px solid transparent;
+    background-color: transparent;
+    width: 10%;
+}
+
+#searchBook > button:hover {
+    cursor: pointer;
+}
+
+#searchBook > button > img {
+    vertical-align: middle;
+    filter: invert(16%) sepia(100%) saturate(2687%) hue-rotate(183deg) brightness(55%) contrast(97%);
+}
+
+.book-list > .book-item {
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+    padding: 20px;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.hide {
+    display: none !important;
+}
+
+.book-list > .book-item > .book-item-desc {
+    width: 75%;
+}
+
+.book-list > .book-item > .book-item-action {
+    width: 25%;
+}
+
+.book-item-action > .delete-btn {
+    background-color: rgb(194, 18, 18);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 8px;
+    color: white;
+    font-size: 12px;
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.book-item-action > .complete-btn,
+.book-item-action > .incomplete-btn {
+    background-color: rgb(0, 112, 9);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding: 8px;
+    color: white;
+    font-size: 12px;
+    width: 100%;
+    margin: 5px 0px;
+}
+
+.book-item-action > .complete-btn,
+.book-item-action > .incomplete-btn, 
+.book-item-action > .delete-btn:hover {
+    cursor: pointer;
+}
+
+/* styling for responsive */
+/* styling for small laptop */
+@media screen and (max-width: 1024px) {
+    main {
+        width: 95%;
+    }
+
+    .input-section {
+        width: 35%;
+    }
+
+    .book-list-section {
+        width: 65%;
+        padding: 50px 20px;
+    }
+}
+
+/* styling for tablet */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+    }
+
+    .input-section {
+        width: 60%;
+    }
+
+    .book-list-section {
+        width: 100%;
+    }
+}
+
+/* styling for mobile */
+@media screen and (max-width: 426px) {
+    .input-section {
+        width: 100%;
+    }
+
+    .book-list-section {
+        width: 100%;
+        padding: 0px;
+    }
+}

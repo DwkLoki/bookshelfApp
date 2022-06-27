@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Bookshelf Apps</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="head-bar">
+            <h1 class="head-bar-title">Bookshelf App</h1>
+        </header>
+        <main>
+            <section class="book-list-section">
+                <div class="search-bar">
+                    <form id="searchBook" autocomplete="off">
+                        <button id="searchSubmit" type="submit">
+                            <img src="assets/search-icon.svg" alt="search-icon">
+                        </button>
+                        <input id="searchBookInput" type="text" placeholder="Cari Judul Buku...">
+                    </form>
+                </div>
+
+                <div class="bookshelf">
+                    <h3>Belum selesai dibaca</h3>
+                    <div id="incompleteBookshelfList" class="book-list">
+
+                    </div>
+                </div>
+
+                <div class="bookshelf">
+                    <h3>Selesai dibaca</h3>
+                    <div id="completeBookshelfList" class="book-list">
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="input-section">
+                <h3>Masukkan Buku Baru</h3>
+                <form id="inputBook" autocomplete="off">
+                    <div class="input">
+                        <input id="inputBookTitle" type="text" placeholder="Judul" required>
+                    </div>
+                    <div class="input">
+                        <input id="inputBookAuthor" type="text" placeholder="Penulis" required>
+                    </div>
+                    <div class="input">
+                        <input id="inputBookYear" type="number" placeholder="Tahun" required>
+                    </div>
+                    <div class="input-complete">
+                        <label for="inputBookIsComplete">Selesai dibaca</label>
+                        <input id="inputBookIsComplete" type="checkbox">
+                    </div>
+                    <button id="bookSubmit" type="submit">Masukkan Buku ke Rak</button>
+                </form>
+            </section>
+        </main>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
